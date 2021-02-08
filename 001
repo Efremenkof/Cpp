@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+int main() {
+    int x;
+    std::cin>>x;
+    int f=x;
+    int k=0;
+    while (f>0)
+    {
+        k++;
+        f=f/10;
+    }
+    int d=pow(10, k-1);
+    for (int i=k-1; i>=0; i--)
+    {
+        std::cout<<x/d<<std::endl;
+        x=x%d;
+        d=d/10;
+    }
+    return 0;
+}
